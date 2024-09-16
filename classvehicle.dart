@@ -1,25 +1,26 @@
-class Vehicle{
-  String? veh;
-  void move(){
-    print('$veh is moving');
-  }
-  
+abstract class Vehicle{
+  double maxspeed();
 }
 
 class Car extends Vehicle{
-  
+  double maxspeed(){
+    return 100;
+  }
+
 }
 
 class Bike extends Vehicle{
+  double maxspeed(){
+    return 80;
 
+  }
 }
-
 
 void main(){
   Car c1=Car();
   Bike b1=Bike();
-  c1.veh='Car';
-  b1.veh='Bike';
-  c1.move();
-  b1.move();
+   print('Area of the circle: ${c1.maxspeed()}');
+  print('Area of the square: ${b1.maxspeed()}');
+  //c1.maxspeed();
+  //b1.maxspeed();
 }
